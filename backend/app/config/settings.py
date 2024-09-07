@@ -34,6 +34,10 @@ PROJECT_NAME_CODE  = env.str('PROJECT_NAME_CODE')
 
 ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=[]))
 
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+
 # STATIC and MEDIA folders config:
 # STATIC_ROOT = env.str('STATIC_ROOT', default=f'{BASE_DIR}/static')
 # STATIC_URL =  env.str('STATIC_URL', default='/static/') 
@@ -57,8 +61,6 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'rest_framework_simplejwt',
     'drf_spectacular',
-    'django_celery_results',
-    'storages'
 ]
 
 LOCAL_APPS = [

@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import TicketImage, Ticket
+from .models import Company, Project, Solution
 
-admin.site.register(Ticket)
-admin.site.register(TicketImage)
+admin.site.register(Company)
+admin.site.register(Project)
+admin.site.register(Solution)

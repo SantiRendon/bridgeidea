@@ -1,9 +1,9 @@
 
 # Django Version 4.2 LTS
-django==4.2
+django==4.2.16
 
 # Django REST Framework
-djangorestframework==3.13.1
+djangorestframework==3.14.0
 
 # JWT token
 djangorestframework-simplejwt==4.8.0

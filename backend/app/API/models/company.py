@@ -11,7 +11,7 @@ class Company(models.Model):
     name = models.CharField('Name', max_length = 300)
     ceo_name = models.CharField('CEO name', max_length = 300)
     location = models.CharField('Location', max_length = 300)
-    hash_id = models.TextField('Hash', none=True, default=None)
+    hash_id = models.TextField('Hash', null=True, default=None)
     
     def save(self, *args, **kwargs):
         pass

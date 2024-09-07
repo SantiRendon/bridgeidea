@@ -21,7 +21,7 @@ class Project(models.Model):
     expiration_date = models.DateTimeField(default=now)
     token = models.CharField('Token', max_length=200,)
     tokens_limit = models.FloatField('Token Limit', default=100)
-    hash_id = models.TextField('Hash', none=True, default=None)
+    hash_id = models.TextField('Hash', null=True, default=None)
     
     class Meta:
         ordering = ('id',)

@@ -22,7 +22,7 @@ class Solution(models.Model):
     created_at = models.DateTimeField(default=now)
     token = models.CharField('Token Payment', max_length=200,)
     proposed_tokens = models.FloatField('Proposed Tokens', default=100)
-    hash_id = models.TextField('Hash', none=True, default=None)
+    hash_id = models.TextField('Hash', null=True, default=None)
     
     class Meta:
         ordering = ('id',)
