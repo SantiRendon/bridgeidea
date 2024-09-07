@@ -20,15 +20,20 @@
 	<div class="mt-2">
 		<dl>
 			<div>
-				<dt class="sr-only">Token</dt>
-
-				<dd class="text-sm text-gray-500">{tokens_limit} {token}</dd>
-			</div>
-
-			<div>
 				<dt class="sr-only">Titulo del proyecto</dt>
 
-				<dd class="font-medium">{company_id} - {title}</dd>
+				<dd class="font-medium">{title} | {tokens_limit} {token}</dd>
+			</div>
+			<!-- <div>
+				<dt class="sr-only">Token</dt>
+				<dd class="text-sm text-gray-500"></dd>
+			</div> -->
+		</dl>
+
+		<dl>
+			<div>
+				<dt class="sr-only">Descripción</dt>
+				<dd class="text-lg text-gray-500">{description}</dd>
 			</div>
 		</dl>
 
