@@ -9,13 +9,13 @@ from API.models import Project
 class Solution(models.Model):
     
     class State(models.IntegerChoices):
-        STARTED = 1, 'pending'
-        IN_PROCESS = 2, 'approved'
-        COMPLETED = 3, 'rejected'
+        PENDING = 1, 'pending'
+        APPROVED = 2, 'approved'
+        REJECTED = 3, 'rejected'
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    state = models.PositiveSmallIntegerField('State', choices=State.choices, default=State.STARTED)
+    state = models.PositiveSmallIntegerField('State', choices=State.choices, default=State.PENDING)
     title = models.CharField('Solution Title', max_length=500)
     description = models.TextField('Solution Description')
     file = models.FileField(upload_to='solutions/', null=True, blank=True)
@@ -23,6 +23,11 @@ class Solution(models.Model):
     token = models.CharField('Token Payment', max_length=200,)
     proposed_tokens = models.FloatField('Proposed Tokens', default=100)
     hash_id = models.TextField('Hash', null=True, default=None)
+    
+    @property
+    def state_name(self):
+        return self.get_state_display()
+    
     
     class Meta:
         ordering = ('id',)

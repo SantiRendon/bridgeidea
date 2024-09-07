@@ -12,6 +12,6 @@ class CompanyViewSet(viewsets.ModelViewSet):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
     
-    def perform_create(self, serializer):
-        #TODO: create tokne in AVALANCHE
-        serializer.save(ticket=self.ticket)
+    # def perform_create(self, serializer):
+    #     #TODO: create tokne in AVALANCHE
+    #     serializer.save(ticket=self.ticket)
