@@ -8,6 +8,11 @@
 	export let state = 'complete';
 	export let token = 'USDT';
 	export let tokens_limit = 4000;
+	export let colorState = '#22c55e';
+	// let colorState = {
+	// 	active: '#22c55e',
+	// 	complete: '#6b7280'
+	// };
 </script>
 
 <a href="/project" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
@@ -16,6 +21,26 @@
 		src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 		class="h-56 w-full rounded-md object-cover"
 	/>
+
+	<svg
+		id="Filled_Circle_24"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		style="    position: relative; bottom: 190px; left: 5px;"
+		><rect width="24" height="24" stroke="none" fill={colorState} opacity="0" />
+
+		<g transform="matrix(1 0 0 1 12 12)">
+			<path
+				style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: {colorState}; fill-rule: nonzero; opacity: 1; position: absolute; "
+				transform=" translate(-12, -12)"
+				d="M 12 2 C 6.477152501692066 2 2 6.477152501692066 2 12 C 2 17.522847498307932 6.477152501692066 22 12 22 C 17.522847498307932 22 22 17.522847498307932 22 12 C 22 6.477152501692066 17.522847498307932 2 12 2 z"
+				stroke-linecap="round"
+			/>
+		</g>
+	</svg>
 
 	<div class="mt-2">
 		<dl>
