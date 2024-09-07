@@ -26,8 +26,8 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'STAR WARS API',
-    'DESCRIPTION': 'API documentation for Start Wars lovers',
+    'TITLE': 'BRIDGE API',
+    'DESCRIPTION': 'API documentation for Bridge Ideas project',
     'VERSION': '1.0.0',
 }
 
