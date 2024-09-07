@@ -1,0 +1,31 @@
+
+# Django Version 4.2 LTS
+django==4.0
+
+# Django REST Framework
+djangorestframework==3.13.1
+
+# JWT token
+djangorestframework-simplejwt==4.8.0
+PyJWT==2.0.1
+
+# Django filter
+django-filter==22.1
+
+# DB
+psycopg2==2.9.3 # postgres
+
+# Manejo de Variables de Entorno
+django-environ==0.10.0
+
+# CORS domain
+django-cors-headers==3.9.0
+
+# Auto Documentation
+drf-spectacular==0.24.2
+
+# Herramienta para Imagenes
+Pillow==9.1.0
+
+web3==7.2.0
+
