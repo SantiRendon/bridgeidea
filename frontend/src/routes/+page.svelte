@@ -38,7 +38,7 @@
 <div class="h-screen w-full bg-white relative flex overflow-hidden">
 	<!-- Sidebar -->
 	<aside
-		class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-800 text-white"
+		class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-200 shadow shadow-gray-300 text-black"
 	>
 		<!-- Profile -->
 		<div
