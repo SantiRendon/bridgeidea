@@ -28,6 +28,21 @@ class Project(models.Model):
     def state_name(self):
         return self.get_state_display()
     
+    @property
+    def _data(self) -> str:
+        return str({
+            'id': self.id,
+            'company_id': self.company.id,
+            'company': self.company.name,
+            'title': self.title,
+            'description': self.description,
+            'creation_date': str(self.creation_date),
+            'expiration_date': str(self.expiration_date),
+            'state': self.state_name,
+            'token': self.token,
+            'tokens_limit': self.tokens_limit
+        })
+    
     
     class Meta:
         ordering = ('id',)
