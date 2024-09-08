@@ -45,7 +45,7 @@
 		<main class="max-w-full h-full flex relative overflow-y-hidden">
 			<!-- Container -->
 			<div
-				class="h-full w-full m-4 flex flex-wrap items-start justify-start rounded-tl grid-flow-col auto-cols-max gap-4 overflow-y-scroll"
+				class="h-full w-full m-4 flex flex-wrap items-start justify-start rounded-tl grid-flow-col auto-cols-max gap-4"
 			>
 				<!-- Container -->
 				<div class="w-96 rounded-lg flex-shrink-0 flex-grow mb-4">
