@@ -30,7 +30,7 @@
 		viewBox="0 0 24 24"
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
-		style="position: relative; bottom: 190px; left: 5px;"
+		style="position: relative; bottom: 215px;left: 10px;"
 		><rect width="24" height="24" stroke="none" fill={colorState} opacity="0" />
 
 		<g transform="matrix(1 0 0 1 12 12)">
@@ -50,10 +50,6 @@
 
 				<dd class="font-medium">{title} | {tokens_limit} {token}</dd>
 			</div>
-			<!-- <div>
-				<dt class="sr-only">Token</dt>
-				<dd class="text-sm text-gray-500"></dd>
-			</div> -->
 		</dl>
 
 		<dl>
@@ -92,20 +88,6 @@
 			</div>
 
 			<div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-				<!-- <svg
-					class="size-4 text-indigo-700"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-					/>
-				</svg> -->
 				<svg
 					width="24"
 					height="24"
@@ -131,13 +113,31 @@
 				</div>
 			</div>
 
-			<!-- <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-				<div class="mt-1.5 sm:mt-0">
-					<p class="text-gray-500">Bedroom</p>
-
-					<p class="font-medium">4 rooms</p>
-				</div>
-			</div> -->
+			<div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+				<button
+					class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
+				>
+					<!-- <span -->
+					<svg
+						id="Download_from_the_Cloud_24"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<!-- <rect width="24" height="24" stroke="none" fill="white" opacity="0" /> -->
+						<g transform="matrix(0.83 0 0 0.83 12 12)">
+							<path
+								style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: white; fill-rule: nonzero; opacity: 1;"
+								transform=" translate(-12, -12)"
+								d="M 12 4 C 9.6655084 4 7.7006133 5.2494956 6.4296875 7.0136719 C 2.8854572 7.05389 0 9.9465993 0 13.5 C 0 17.078268 2.9217323 20 6.5 20 L 18.5 20 C 21.525577 20 24 17.525577 24 14.5 C 24 11.509638 21.577034 9.0762027 18.599609 9.0195312 C 17.729938 6.1415745 15.152096 4 12 4 z M 12 6 C 14.504527 6 16.55398 7.825491 16.931641 10.214844 L 17.083984 11.175781 L 18.048828 11.050781 C 18.272182 11.021699 18.414903 11 18.5 11 C 20.444423 11 22 12.555577 22 14.5 C 22 16.444423 20.444423 18 18.5 18 L 6.5 18 C 4.0022677 18 2 15.997732 2 13.5 C 2 11.002268 4.0022677 9 6.5 9 C 6.534993 9 6.6164592 9.0069899 6.75 9.0136719 L 7.3613281 9.0449219 L 7.6660156 8.5136719 C 8.5301088 7.0123517 10.137881 6 12 6 z M 11 9 L 11 13 L 8 13 L 12 17 L 16 13 L 13 13 L 13 9 L 11 9 z"
+								stroke-linecap="round"
+							/>
+						</g>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </a>
