@@ -1,47 +1,56 @@
 <script>
 	// Add your component logic here
 	export let company_id = 1;
+	export let state = 'complete';
 	export let title = 'Implement open banking';
 	export let description = 'example of description';
 	export let creation_date = '2024-09-13';
 	export let expiration_date = '2025-04-23';
-	export let state = 'complete';
 	export let token = 'USDT';
 	export let tokens_limit = 4000;
 	export let colorState = '#22c55e';
+	export let resume = 'https://readerslibrary.org/wp-content/uploads/Mort-1.pdf'; // Tu link al PDF
 
-	// let colorState = {
-	// 	active: '#22c55e',
-	// 	complete: '#6b7280'
-	// };
+	function downloadResume() {
+		const link = document.createElement('a');
+		link.href = resume;
+		link.setAttribute('target', '_blank'); // Abrir en una nueva pestaña
+		link.setAttribute('rel', 'noopener noreferrer'); // Seguridad adicionals
+		link.setAttribute('download', 'resume.pdf'); // Nombre con el que se descargará el archivo
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link); // Limpia el DOM después de la descarga
+	}
 </script>
 
-<a href="/project" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
-	<img
-		alt="alternative text"
-		src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-		class="h-56 w-full rounded-md object-cover"
-	/>
+<div class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
+	<a href="/project">
+		<img
+			alt="alternative text"
+			src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+			class="h-56 w-full rounded-md object-cover"
+		/>
 
-	<svg
-		id="Filled_Circle_24"
-		width="24"
-		height="24"
-		viewBox="0 0 24 24"
-		xmlns="http://www.w3.org/2000/svg"
-		xmlns:xlink="http://www.w3.org/1999/xlink"
-		style="position: relative; bottom: 215px;left: 10px;"
-		><rect width="24" height="24" stroke="none" fill={colorState} opacity="0" />
+		<svg
+			id="Filled_Circle_24"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			style="position: relative; bottom: 215px;left: 10px;"
+			><rect width="24" height="24" stroke="none" fill={colorState} opacity="0" />
 
-		<g transform="matrix(1 0 0 1 12 12)">
-			<path
-				style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: {colorState}; fill-rule: nonzero; opacity: 1; position: absolute; "
-				transform=" translate(-12, -12)"
-				d="M 12 2 C 6.477152501692066 2 2 6.477152501692066 2 12 C 2 17.522847498307932 6.477152501692066 22 12 22 C 17.522847498307932 22 22 17.522847498307932 22 12 C 22 6.477152501692066 17.522847498307932 2 12 2 z"
-				stroke-linecap="round"
-			/>
-		</g>
-	</svg>
+			<g transform="matrix(1 0 0 1 12 12)">
+				<path
+					style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: {colorState}; fill-rule: nonzero; opacity: 1; position: absolute; "
+					transform=" translate(-12, -12)"
+					d="M 12 2 C 6.477152501692066 2 2 6.477152501692066 2 12 C 2 17.522847498307932 6.477152501692066 22 12 22 C 17.522847498307932 22 22 17.522847498307932 22 12 C 22 6.477152501692066 17.522847498307932 2 12 2 z"
+					stroke-linecap="round"
+				/>
+			</g>
+		</svg>
+	</a>
 
 	<div class="mt-2">
 		<dl>
@@ -113,11 +122,14 @@
 				</div>
 			</div>
 
-			<div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-				<button
+			<div
+				class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2"
+				style="position: relative; left:45px"
+			>
+				<!-- <button
 					class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
 				>
-					<!-- <span -->
+				
 					<svg
 						id="Download_from_the_Cloud_24"
 						width="24"
@@ -126,10 +138,33 @@
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
 					>
-						<!-- <rect width="24" height="24" stroke="none" fill="white" opacity="0" /> -->
+				
 						<g transform="matrix(0.83 0 0 0.83 12 12)">
 							<path
 								style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: white; fill-rule: nonzero; opacity: 1;"
+								transform=" translate(-12, -12)"
+								d="M 12 4 C 9.6655084 4 7.7006133 5.2494956 6.4296875 7.0136719 C 2.8854572 7.05389 0 9.9465993 0 13.5 C 0 17.078268 2.9217323 20 6.5 20 L 18.5 20 C 21.525577 20 24 17.525577 24 14.5 C 24 11.509638 21.577034 9.0762027 18.599609 9.0195312 C 17.729938 6.1415745 15.152096 4 12 4 z M 12 6 C 14.504527 6 16.55398 7.825491 16.931641 10.214844 L 17.083984 11.175781 L 18.048828 11.050781 C 18.272182 11.021699 18.414903 11 18.5 11 C 20.444423 11 22 12.555577 22 14.5 C 22 16.444423 20.444423 18 18.5 18 L 6.5 18 C 4.0022677 18 2 15.997732 2 13.5 C 2 11.002268 4.0022677 9 6.5 9 C 6.534993 9 6.6164592 9.0069899 6.75 9.0136719 L 7.3613281 9.0449219 L 7.6660156 8.5136719 C 8.5301088 7.0123517 10.137881 6 12 6 z M 11 9 L 11 13 L 8 13 L 12 17 L 16 13 L 13 13 L 13 9 L 11 9 z"
+								stroke-linecap="round"
+							/>
+						</g>
+					</svg>
+				</button> -->
+
+				<button
+					class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
+					on:click={downloadResume}
+				>
+					<svg
+						id="Download_from_the_Cloud_24"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+					>
+						<g transform="matrix(0.83 0 0 0.83 12 12)">
+							<path
+								style="stroke: none; fill: white;"
 								transform=" translate(-12, -12)"
 								d="M 12 4 C 9.6655084 4 7.7006133 5.2494956 6.4296875 7.0136719 C 2.8854572 7.05389 0 9.9465993 0 13.5 C 0 17.078268 2.9217323 20 6.5 20 L 18.5 20 C 21.525577 20 24 17.525577 24 14.5 C 24 11.509638 21.577034 9.0762027 18.599609 9.0195312 C 17.729938 6.1415745 15.152096 4 12 4 z M 12 6 C 14.504527 6 16.55398 7.825491 16.931641 10.214844 L 17.083984 11.175781 L 18.048828 11.050781 C 18.272182 11.021699 18.414903 11 18.5 11 C 20.444423 11 22 12.555577 22 14.5 C 22 16.444423 20.444423 18 18.5 18 L 6.5 18 C 4.0022677 18 2 15.997732 2 13.5 C 2 11.002268 4.0022677 9 6.5 9 C 6.534993 9 6.6164592 9.0069899 6.75 9.0136719 L 7.3613281 9.0449219 L 7.6660156 8.5136719 C 8.5301088 7.0123517 10.137881 6 12 6 z M 11 9 L 11 13 L 8 13 L 12 17 L 16 13 L 13 13 L 13 9 L 11 9 z"
 								stroke-linecap="round"
@@ -140,7 +175,7 @@
 			</div>
 		</div>
 	</div>
-</a>
+</div>
 
 <style>
 	/* Add your component styles here */
