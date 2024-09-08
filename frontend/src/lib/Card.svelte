@@ -9,6 +9,7 @@
 	export let token = 'USDT';
 	export let tokens_limit = 4000;
 	export let colorState = '#22c55e';
+
 	// let colorState = {
 	// 	active: '#22c55e',
 	// 	complete: '#6b7280'
@@ -29,7 +30,7 @@
 		viewBox="0 0 24 24"
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
-		style="    position: relative; bottom: 190px; left: 5px;"
+		style="position: relative; bottom: 190px; left: 5px;"
 		><rect width="24" height="24" stroke="none" fill={colorState} opacity="0" />
 
 		<g transform="matrix(1 0 0 1 12 12)">
