@@ -64,7 +64,7 @@
 		<dl>
 			<div>
 				<dt class="sr-only">Descripción</dt>
-				<dd class="text-lg text-gray-500">{description}</dd>
+				<dd class="text-lg text-gray-500">{description.slice(0, 55)}</dd>
 			</div>
 		</dl>
 
